@@ -1,0 +1,118 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+
+p{
+    margin: 0 !important;
+}
+:root {
+    --color-primary: #466ead;
+  
+    --color-dark-grey: #b4b4b4;
+    --color-light-grey: #f5f5f5;
+    --color-medium-grey: #cec9c9fe;
+    --color-lighter-grey: #eaedf0;
+    --color-white: white;
+    --color-light-white: rgba(255, 255, 255, 0.744);
+  
+    --color-black: black;
+    --color-transparent: transparent;
+    --color-yellow: rgb(231, 212, 43);
+    --color-dark-yellow: rgb(238, 230, 123);
+    --color-marketplace-accent: #f48534;
+    --color-dim-white: rgba(255, 255, 255, 0.2);
+    --color-dark-dim-white: rgba(255, 255, 255, 0.4);
+    --color-red: #EF9A9A;
+    --color-light-red: #eea982;
+    --color-redd: #dd1010;
+    --color-light-dark: rgb(100, 116, 139);
+    --color-primary-dark: rgb(30, 64, 175);
+    --color-button-navbar: rgb(226, 232, 240);
+    --color-dashboard: rgb(241, 245, 249);
+    --color-lighter-green: rgb(187, 235, 198);
+    --color-green: rgb(68, 134, 68);
+    --color-light-green: rgb(75 235 62);
+  
+    --color-dark-dim-dark: rgba(255, 255, 255, 0.3);
+  
+    --color-login-gradient: #1e345a;
+    --color-login-gradient-2: #2b5db2;
+  
+    --color-gradient-dark: #1a54b8;
+  
+    --color-drawer-light: #6999e7;
+    --color-drawer-dark: #1453bb;
+    --color-drawer-active: #6d9deb;
+    --color-drawer-bottom-card: #183f93;
+    --color-drawer-bottom-list: #254a9b;
+  
+    --color-toggle-background: #8baf8a;
+    --color-process-card: #f0f7f0;
+  
+    --color-yellow-1: yellow;
+    --color-yellow: #ffbf06;
+    --color-red: #EF9A9A;
+    --color-brown: brown;
+    --color-purple: #cd99fe;
+    --color-pink: #fe9bce;
+    --color-pink-1: #f86a9a;
+    --color-pink-2: #fe989b;
+    --color-green: #7ab557;
+    --color-orange: #fd8c73;
+  
+  
+    --global-padding: 15px;
+    --container-padding: 15px;
+    --global-radius: 22px;
+    --drawer-width: 276px;
+    --list-tile-padding: 12px;
+    --table-radius: 8px;
+    --color-stepper: linear-gradient(to right, #122851, #2D69CC);
+    /* --fonts-primary: 'Noto Sans', sans-serif; */
+    --color-menu-grey: lightgrey;
+    --flag-input-radius: 0 5px 5px 0;
+    --color-dark-blue: rgb(54, 54, 168);
+    --color-dark-bluee: rgba(8, 8, 173, 0.452);
+    --color-dark-Blue: #002C55;
+    --color-creation-badge: rgba(0, 0, 0, 0.4);
+    --color-notify-backgroundColor: #FFFCE9;
+    --color-box-sadow: 0 0 10px darkGrey;
+    /* //newly added */
+    --color-sky-blue: #466fdf;
+    --color-new-grey:#cdcccc;
+    --color-nav:#474d6a;
+    --color-text-color:#666666;
+  
+  }
+  .container-padding{
+    padding: 10px;
+  }
+  .spacer-width{
+    width: 1vw;
+  }
+  .spacer-height{
+    height: 2vh;
+  }
+  .font-small{
+    font-size: 16px;
+  }
+  .font-medium{
+    font-size: 23px;
+  }
+  .font-large{
+    font-size: 28px;
+  }
+  .font-largeX{
+    font-size: 35px;
+  }
+  .bold{
+    font-weight: bold;
+  }

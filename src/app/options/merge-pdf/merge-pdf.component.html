@@ -1,0 +1,59 @@
+<div [ngStyle]="zoom_open ?{'filter': 'blur(5px)'}: {'filter': 'none'}  ">
+    <div class="h-96 flex flex-col justify-center items-center bg-stone-100">
+     <p class="font-bold text-3xl">Merge PDF Files Online</p>
+     <p class="text-xl ">Combine multiple PDFs and images into one</p>
+     <div class="h-10"></div>
+     <div>
+        <button mat-raised-button class="uploadbutton cursor-pointer"> Upload PDF
+        <input class="hide_input cursor-pointer" type="file" (change)="onFileSelected($event,'new')" accept="application/pdf" multiple>
+        </button>
+     </div>
+     <div class="h-10"></div>
+
+     <p>Files stay private. Automatically deleted after 2 hours.</p>
+     <p>Free service for documents up to 50 pages or 50 MB and 3 tasks per hour.</p>
+    </div>
+    <div *ngIf="pdfFiles.length > 0" class="h-3/4 flex flex-col justify-center items-center bg-stone-200">
+        <div class="h-10"></div>
+        <div class="flex justify-center items-center w-40 rounded-xl border-black border-2 bg-white relative cursor-pointer">
+
+            <p class="font-bold text-sm cursor-pointer">Add Files</p>
+            <input class="hide2" type="file" (change)="onFileSelected($event,'add')" accept="application/pdf" multiple>
+        
+        </div>
+        <p>Drag and Drop to change the order</p>
+        <div class="h-10"></div>
+
+    <div class="thumbnails" cdkDropList cdkDropListOrientation="mixed" (cdkDropListDropped)="drop($event)">
+        @for (pdf of pdfFiles; track pdf) {
+        <div  class="thumbnail" cdkDrag>
+            <div id="crcrcr" class="absolute top-3 right-42px w-24 p-4px rounded-lg  justify-between items-center h-10 bg-white shadow-md hidden cursor-pointer">
+                <mat-icon aria-hidden="false" class="zoom_icon" aria-label="Example home icon" fontIcon="zoom_in" (click)="openImage(pdf.thumbnail)"></mat-icon>
+                <mat-icon aria-hidden="false" class="rotate_icon" aria-label="Example home icon" fontIcon="rotate_left" (click)="rotateLeft(pdf.id)"></mat-icon>
+                <mat-icon aria-hidden="false" class="rotate_icon" aria-label="Example home icon" fontIcon="rotate_right" (click)="rotateRight(pdf.id)"></mat-icon>
+
+                <mat-icon aria-hidden="false" class="delete_icon" aria-label="Example home icon" fontIcon="delete" (click)="deletepdf(pdf.id)"></mat-icon>
+
+            </div>
+          <img *ngIf="pdf.thumbnail" [src]="pdf.thumbnail" alt="{{ pdf.name }}"  />
+          <p>{{ pdf.name }}</p>
+
+
+        </div>
+      
+
+    }
+      </div>
+      <div class="h-10"></div>
+
+      <button mat-raised-button class="uploadbutton cursor-pointer" (click)="mergePDFs()">Click to Download the Merged PDF</button>
+      <div class="h-10"></div>
+
+      </div>
+</div>
+  <div *ngIf="zoom_open" class="zoom">
+            <mat-icon aria-hidden="false" class="close_icon cursor-pointer" aria-label="Example home icon" fontIcon="close" (click)="zoom_open = false"></mat-icon>
+
+            <img   [src]="image"  />
+
+ </div>

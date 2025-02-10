@@ -1,0 +1,61 @@
+<div>
+ 
+    <div class="bg-stone-300">
+    <app-flex flexDirection="column" height="30vh" justifyContent="center">
+        <p flex-body class="bold font-largeX">We help with your PDF tasks</p>
+        <div flex-body class="spacer-height"></div>
+        <p flex-body class="font-medium">Easy, pleasant and productive PDF editor</p>
+           
+    </app-flex>
+    <app-flex flexDirection="column" height="auto" justifyContent="center"  padding="20px">
+    <div flex-body class="grid">
+         <div *ngFor="let i of cards" class="card" (click)="openOptions(i.id)">
+            <app-flex>
+                <button flex-body  class="example-icon" [ngStyle]="{'background-color':i.color}">
+                    <mat-icon>{{i.icon}}</mat-icon>
+                  </button> 
+                  <span flex-body class="spacer-width"></span>
+                  <p flex-body class="bold">{{i.name}}</p>
+            </app-flex>
+            <div flex-body class="spacer-height"></div>
+            <p>{{i.describe}}</p>
+         </div>
+    </div>
+    </app-flex>
+    <div class="h-20"></div>
+
+  </div>
+
+  <div class="footer bg-stone-400">
+    <app-flex>
+        <app-flex flex-body flexDirection="column"> 
+            <h4 flex-body>Resource</h4>
+            <p flex-body>text</p>
+            <p flex-body>text</p>
+            <p flex-body>text</p>
+            <p flex-body>text</p>
+            <p flex-body>text</p>
+
+
+        </app-flex>
+        <app-flex flex-body flexDirection="column">
+            <h4 flex-body>Product</h4>
+            <p flex-body>text</p>
+            <p flex-body>text</p>
+            <p flex-body>text</p>
+            <p flex-body>text</p>
+            <p flex-body>text</p>
+        </app-flex>
+        <app-flex flex-body flexDirection="column">
+            <h4 flex-body>Solution</h4>
+            <p flex-body>text</p>
+            <p flex-body>text</p>
+            <p flex-body>text</p>
+            <p flex-body>text</p>
+            <p flex-body>text</p>
+        </app-flex>
+    </app-flex>
+   
+  </div>
+
+</div>
